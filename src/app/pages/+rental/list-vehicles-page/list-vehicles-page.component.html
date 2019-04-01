@@ -1,0 +1,24 @@
+ <div class="uk-container">
+  <div class="uk-grid uk-margin-small-top">
+    <div class="uk-width-1-2 uk-margin-small-bottom" *ngFor="let car of _cars$">
+      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card-media-left uk-cover-container">
+          <img src="https://picsum.photos/200/300/?random" alt="" uk-cover>
+          <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">{{ car.code }} - {{car.model}}</h3>
+            <p>Nº de passageiros: {{ car.passengersQuantity }}</p>
+            <p>Data de Cadastro: {{ car.createDate }}</p>
+
+            
+            <button type="button" class="uk-icon uk-button uk-button-default" 
+              uk-icon="trash"></button>
+   
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
