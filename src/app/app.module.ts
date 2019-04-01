@@ -1,29 +1,25 @@
+import { AccountModule } from './pages/+account/account.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { AppRoutingModule } from './app-routing.module';
-import { LoginPageComponent } from './#pages/+account/login-page/login-page.component';
-import { CartPageComponent } from './#pages/+store/cart-page/cart-page.component';
-import { CarsPageComponent } from './#pages/+account/cars-page/cars-page.component';
-import { RentalPageComponent } from './#pages/+store/rental-page/rental-page.component';
 import { AppComponent } from './app.component';
-import { FramePageComponent } from './#pages/+master/frame.page';
-import { VehiclePageComponent } from './#pages/+store/vehicle-page/vehicle-page.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SharedModule } from './shared/shared.module';
+import { RentalModule } from './pages/+rental/rental.module';
+import { FramePageComponent } from './pages/master/frame.page';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent,
-    NavbarComponent,
-    CarsPageComponent,
-    CartPageComponent,
-    RentalPageComponent,
-    FramePageComponent,
-    VehiclePageComponent
+    FramePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    RentalModule,
+    AccountModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,33 +1,38 @@
+import { AppComponent } from './app.component';
+import { ListVehiclesPageComponent } from './pages/+rental/list-vehicles-page/list-vehicles-page.component';
+import { FramePageComponent } from './pages/master/frame.page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FramePageComponent } from './#pages/+master/frame.page';
-import { LoginPageComponent } from './#pages/+account/login-page/login-page.component';
-import { CarsPageComponent } from './#pages/+account/cars-page/cars-page.component';
-import { CartPageComponent } from './#pages/+store/cart-page/cart-page.component';
-import { RentalPageComponent } from './#pages/+store/rental-page/rental-page.component';
-import { VehiclePageComponent } from './#pages/+store/vehicle-page/vehicle-page.component';
-
+import { LoginPageComponent } from './pages/+account/login-page/login-page.component';
+import { ListRentalsPageComponent } from './pages/+rental/list-rentals-page/list-rentals-page.component';
+import { UserPageComponent } from './pages/+account/user-page/user-page.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'rental',
     component: FramePageComponent,
     children: [
-      { path: '', component: VehiclePageComponent },
-      { path: 'cart', component: CartPageComponent },
-      { path: 'rental', component: RentalPageComponent }
+      { path: 'list-rentals', component: ListRentalsPageComponent },
+      { path: 'list-vehicles', component: ListVehiclesPageComponent }
     ]
   },
   {
     path: 'account',
     component: FramePageComponent,
     children: [
-      { path: 'cars', component: CarsPageComponent }
+      { path: 'user', component: UserPageComponent}
     ]
   },
-  { path: 'login', component: LoginPageComponent }
-];
+  {
+    path: '',
+    component: AppComponent,
+    children: [
+      {path: '', component: LoginPageComponent },
+      {path: 'login', component: LoginPageComponent }
+    ]
+  }
 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
