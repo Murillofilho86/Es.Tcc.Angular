@@ -1,19 +1,25 @@
+import { DetailsModalRentalPageComponent } from './details-modal-rental-page/details-modal-rental-page.component';
 import { ListRentalsPageComponent } from './list-rentals-page/list-rentals-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListVehiclesPageComponent } from './list-vehicles-page/list-vehicles-page.component';
+import { CreateRentalPageComponent } from './create-rental-page/create-rental-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     ListRentalsPageComponent,
-    ListVehiclesPageComponent
+    CreateRentalPageComponent,
+    DetailsModalRentalPageComponent
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ListRentalsPageComponent,
-    ListVehiclesPageComponent
+    CreateRentalPageComponent,
+    DetailsModalRentalPageComponent
   ]
 })
 export class RentalModule { }

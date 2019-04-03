@@ -6,23 +6,24 @@
           <span class="uk-icon uk-margin-small-right" uk-icon="icon: icon-color-light; ratio: 0.15 "></span>
         </a>
         <ul class="uk-navbar-nav">
-          <li><a href="/rental/list-rental" routerLinkActive="uk-text-bold">Locações</a></li>
-          <li><a [routerLink]="['/rental/costomer']" routerLinkActive="uk-text-bold">Clientes</a></li>
-          <li><a [routerLink]="['/rental/list-vehicles']" routerLinkActive="uk-text-bold">Veiculos</a></li>
+          <li><a [routerLink]="['/rental/list-rentals']" routerLinkActive="uk-text-bold">Locações</a></li>
+          <li><a [routerLink]="['/customer/list-customers']" routerLinkActive="uk-text-bold">Clientes</a></li>
+          <li><a [routerLink]="['/vehicle/list-vehicles']" routerLinkActive="uk-text-bold">Veiculos</a></li>
+          <li><a [routerLink]="['/plan/list-plans']" routerLinkActive="uk-text-bold">Planos</a></li>
         </ul>
       </div>
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
           <li>
-            <a [routerLink]="['/account/user']" >
-            <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+            <a [routerLink]="['/account/user']">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
             </a>
           </li>
           <li>
-              <a [routerLink]="['/login']" >
+            <a [routerLink]="['/login']">
               <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
-              </a>
-            </li>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

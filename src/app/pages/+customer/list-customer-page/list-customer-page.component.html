@@ -3,11 +3,11 @@
     <div class="uk-navbar-right">
       <ul class="uk-navbar-nav">
         <li class="uk-active">
-          <a [routerLink]="['/rental/create-rental']" uk-toggle>
+          <a [routerLink]="['/customer/create-customer']" uk-toggle>
             <span class="uk-icon uk-margin-small-right" uk-icon="icon: plus"></span>
             Adicionar
           </a>
-          
+
         </li>
       </ul>
     </div>
@@ -19,23 +19,22 @@
   <table class="uk-table uk-table-middle uk-table-divider uk-table-hover">
     <thead>
       <tr>
-        <th class="uk-width-large">Cliente</th>
-        <th>Data de locação</th>
-        <th>Data de devolução</th>
-        <th>Valor</th>
-        <th>Detalhes</th>
+        <th class="uk-width-small">Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Editar</th>
         <th>Excluir</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Rafael Mendonça Lima</td>
-        <td>15/02/2019</td>
-        <td>17/02/2019</td>
-        <td>R$ 350,00</td>
-        <td><app-details-modal-rental-page></app-details-modal-rental-page></td>
-        <td><button class="uk-button uk-button-default" type="button" 
-            uk-icon="trash"></button></td>
+        <td>Jailto Santos Neto</td>
+        <td>21 96836-4846</td>
+        <td>jaja@gmail.com</td>
+        <td>
+          <app-edit-modal-customer-page></app-edit-modal-customer-page>
+        </td>
+        <td><button class="uk-button uk-button-default" type="button" uk-icon="trash"></button></td>
       </tr>
     </tbody>
   </table>

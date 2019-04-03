@@ -1,3 +1,6 @@
+import { PlanModule } from './pages/+plan/plan.module';
+import { VehicleModule } from './pages/+vehicle/vehicle.module';
+import { CustomerModule } from './pages/+customer/customer.module';
 import { AccountModule } from './pages/+account/account.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,14 +15,17 @@ import { FramePageComponent } from './pages/master/frame.page';
 @NgModule({
   declarations: [
     AppComponent,
-    FramePageComponent
+    FramePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     RentalModule,
-    AccountModule
+    AccountModule,
+    CustomerModule,
+    VehicleModule,
+    PlanModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

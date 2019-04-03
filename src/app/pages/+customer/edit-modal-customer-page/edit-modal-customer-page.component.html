@@ -1,0 +1,77 @@
+<button button uk-toggle="target: #edit-modal-customer" class="uk-button uk-button-default">
+    <span class="uk-icon uk-margin-small-right" uk-icon="icon: pencil"></span>
+</button>
+
+
+
+<div id="edit-modal-customer" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Jailton Santos Neto</h2>
+        </div>
+        <div class="uk-modal-body">
+            <form >
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Nome</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" 
+                            id="form-stacked-text" type="phone" placeholder="Nome">
+                    </div>
+                </div>
+              <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Telefone</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" 
+                            id="form-stacked-text" type="phone" placeholder="Telefone">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">E-mail</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input"
+                            id="form-stacked-text" type="text" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Data de nascimento</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" 
+                            id="form-stacked-text" type="number"
+                            placeholder="Data de nascimento">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Endereço</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" 
+                            id="form-stacked-text" type="text"
+                            placeholder="Data de nascimento">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">CPF</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" 
+                            id="form-stacked-text" type="text"
+                            placeholder="CPF">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Carteira de motorista</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" 
+                            id="form-stacked-text" type="text"
+                            placeholder="Carteira de motorista">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close">Cancelar</button>
+            <button class="uk-button uk-button-primary" (click)="updateAirplane()" type="submit" uk-icon="icon: save">
+                Salvar</button>
+        </div>
+    </div>
+</div>
